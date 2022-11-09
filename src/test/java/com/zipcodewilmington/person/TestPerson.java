@@ -11,7 +11,7 @@ public class TestPerson {
     public void testDefaultConstructor() {
         // Given
         String expectedName = "";
-        Integer expectedAge = Integer.MAX_VALUE;
+        Integer expectedAge = 0;
 
         // When
         Person person = new Person();
@@ -103,8 +103,39 @@ public class TestPerson {
 
         person.setAddress(expected);
 
-        String actual = person.currentAddress(expected);
+        String actual = person.currentAddress();
 
+        Assert.assertEquals(expected,actual);
+    }@Test
+    public void testSetWeight() {
+        Person person = new Person();
+        Double expected = 195.00;
+
+        person.setWeight(expected);
+
+        Double actual = person.getWeight();
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testSetDisability() {
+        Person person = new Person();
+        Boolean expected = false;
+
+        person.setDisability(expected);
+
+        Boolean actual = person.getDisability();
+        Assert.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void testSetSex() {
+        Person person = new Person();
+        Character expected = 'f';
+
+        person.setSex(expected);
+
+        Character actual = person.getSex();
         Assert.assertEquals(expected,actual);
     }
 }

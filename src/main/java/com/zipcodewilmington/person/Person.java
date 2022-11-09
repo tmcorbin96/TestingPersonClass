@@ -13,15 +13,25 @@ public class Person {
     private char sex;
 
     public Person() {
+        name = "";
+        age = 0;
+        address = "";
+        disabled =false;
+        weight = 0;
+        sex = ' ';
     }
 
     public Person(int age) {
+        this.age = age;
     }
 
     public Person(String name) {
+        this.name=name;
     }
 
     public Person(String name, int age) {
+        this.name=name;
+        this.age=age;
     }
 
     public void setName(String name) {
@@ -35,6 +45,17 @@ public class Person {
     public void setAddress(String address){
         this.address = address;
     }
+    public void setWeight(double weight) {
+        this.weight=weight;
+    }
+
+    public void setDisability(boolean disabled) {
+        this.disabled=disabled;
+    }
+
+    public void setSex(char sex) {
+        this.sex=sex;
+    }
 
     public String getName() {
        return name;
@@ -43,7 +64,20 @@ public class Person {
     public Integer getAge() {
         return age;
     }
-    public String currentAddress(String expected) {
+    public String currentAddress() {
         return address;
     }
+
+    public Double getWeight() {
+        return weight;
+    }
+    public Boolean getDisability() {
+        return disabled;
+    }
+
+    public Character getSex() {
+        return sex;
+    }
+
+
 }
