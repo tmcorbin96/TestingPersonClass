@@ -95,4 +95,16 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testCurrentAddress() {
+        Person person = new Person();
+        String expected = "3500 Snyder Ave";
+
+        person.setAddress(expected);
+
+        String actual = person.currentAddress(expected);
+
+        Assert.assertEquals(expected,actual);
+    }
 }
